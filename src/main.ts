@@ -1,12 +1,8 @@
-import { NestContainer, NestFactory } from '@nestjs/core';
+import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import {
-  Transport,
-  MicroserviceOptions,
-  NestMicroservice,
-} from '@nestjs/microservices';
-import { AppService } from './app.service';
-import { ServerRMQ } from './strategy';
+import { MicroserviceOptions } from '@nestjs/microservices';
+
+import { RmqStrategy } from './strategy';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -24,8 +20,7 @@ async function bootstrap() {
     AppModule,
 
     {
-      strategy: new ServerRMQ(options),
-      // transport: Transport.RMQ,
+      strategy: new RmqStrategy(options),
     },
   );
   //console.log(QueueServer);
