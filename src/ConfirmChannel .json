@@ -1,0 +1,246 @@
+NestMicroservice {
+  container: NestContainer {
+    _applicationConfig: ApplicationConfig {
+      ioAdapter: null,
+      globalPrefix: '',
+      globalPrefixOptions: {},
+      globalPipes: [],
+      globalFilters: [],
+      globalInterceptors: [],
+      globalGuards: [],
+      globalRequestPipes: [],
+      globalRequestFilters: [],
+      globalRequestInterceptors: [],
+      globalRequestGuards: []
+    },
+    globalModules: Set { [Module] },
+    moduleTokenFactory: ModuleTokenFactory { moduleIdsCache: [WeakMap] },
+    moduleCompiler: ModuleCompiler { moduleTokenFactory: [ModuleTokenFactory] },
+    modules: ModulesContainer [Map] {
+      'f2fe1d3f0f2ec24a272a3e485d3847176e3188e0' => [Module],
+      '4ce59bdc14e4b865398ebd19c1497d5c2fd76072' => [Module],
+      '10245eb0ef08d81ca7d8015c162b9771eb303a0f' => [Module],
+      _applicationId: '26188c18-8e80-441c-b004-e33561217594',
+      InternalCoreModule: [Module]
+    },
+    dynamicModulesMetadata: Map { 'f2fe1d3f0f2ec24a272a3e485d3847176e3188e0' => [Object] },
+    internalProvidersStorage: InternalProvidersStorage {
+      _httpAdapterHost: [HttpAdapterHost],
+      _httpAdapter: null
+    },
+    internalCoreModule: Module {
+      _metatype: [class InternalCoreModule],
+      container: [Circular],
+      _imports: Set {},
+      _providers: [Map],
+      _injectables: Map {},
+      _middlewares: Map {},
+      _controllers: Map {},
+      _exports: [Set],
+      _distance: 0,
+      _id: '725fa076-11de-4172-bedd-f34b20a99635',
+      _token: 'f2fe1d3f0f2ec24a272a3e485d3847176e3188e0'
+    }
+  },
+  scope: [],
+  contextModule: Module {
+    _metatype: [class InternalCoreModule],
+    container: NestContainer {
+      _applicationConfig: [ApplicationConfig],
+      globalModules: [Set],
+      moduleTokenFactory: [ModuleTokenFactory],
+      moduleCompiler: [ModuleCompiler],
+      modules: [ModulesContainer [Map]],
+      dynamicModulesMetadata: [Map],
+      internalProvidersStorage: [InternalProvidersStorage],
+      internalCoreModule: [Circular]
+    },
+    _imports: Set {},
+    _providers: Map {
+      [class InternalCoreModule] => [InstanceWrapper],
+      [class ModuleRef] => [InstanceWrapper],
+      [class ApplicationConfig] => [InstanceWrapper],
+      [class Reflector] => [InstanceWrapper],
+      'Reflector' => [InstanceWrapper],
+      'REQUEST' => [InstanceWrapper],
+      'INQUIRER' => [InstanceWrapper],
+      [class ExternalContextCreator] => [InstanceWrapper],
+      [class ModulesContainer extends Map] => [InstanceWrapper],
+      [class HttpAdapterHost] => [InstanceWrapper],
+      'HttpAdapterHost' => [InstanceWrapper],
+      [class LazyModuleLoader] => [InstanceWrapper]
+    },
+    _injectables: Map {},
+    _middlewares: Map {},
+    _controllers: Map {},
+    _exports: Set {
+      [class Reflector],
+      'Reflector',
+      'REQUEST',
+      'INQUIRER',
+      [class ExternalContextCreator],
+      [class ModulesContainer extends Map],
+      [class HttpAdapterHost],
+      'HttpAdapterHost',
+      [class LazyModuleLoader]
+    },
+    _distance: 0,
+    _id: '725fa076-11de-4172-bedd-f34b20a99635',
+    _token: 'f2fe1d3f0f2ec24a272a3e485d3847176e3188e0'
+  },
+  isInitialized: true,
+  injector: Injector {
+    logger: Logger { context: 'InjectorLogger', options: {} }
+  },
+  activeShutdownSignals: [],
+  moduleCompiler: ModuleCompiler {
+    moduleTokenFactory: ModuleTokenFactory { moduleIdsCache: [WeakMap] }
+  },
+  applicationConfig: ApplicationConfig {
+    ioAdapter: null,
+    globalPrefix: '',
+    globalPrefixOptions: {},
+    globalPipes: [],
+    globalFilters: [],
+    globalInterceptors: [],
+    globalGuards: [],
+    globalRequestPipes: [],
+    globalRequestFilters: [],
+    globalRequestInterceptors: [],
+    globalRequestGuards: []
+  },
+  logger: Logger {
+    context: 'NestMicroservice',
+    options: { timestamp: true },
+    localInstanceRef: ConsoleLogger {
+      context: 'NestMicroservice',
+      options: [Object],
+      originalContext: 'NestMicroservice'
+    }
+  },
+  microservicesModule: MicroservicesModule {
+    clientsContainer: ClientsContainer { clients: [] },
+    listenersController: ListenersController {
+      clientsContainer: [ClientsContainer],
+      contextCreator: [RpcContextCreator],
+      container: [NestContainer],
+      injector: [Injector],
+      clientFactory: [class ClientProxyFactory],
+      exceptionFiltersContext: [ExceptionFiltersContext],
+      metadataExplorer: [ListenerMetadataExplorer],
+      exceptionFiltersCache: [WeakMap]
+    }
+  },
+  socketModule: null,
+  isTerminated: false,
+  isInitHookCalled: false,
+  microserviceConfig: {
+    transport: 5,
+    options: {
+      urls: [Array],
+      queue: 'demo_queue',
+      noAck: false,
+      prefetchCount: 5,
+      queueOptions: [Object]
+    }
+  },
+  server: ServerRMQ {
+    messageHandlers: Map { '{}' => [Function] },
+    logger: Logger { context: 'Server', options: {} },
+    options: {
+      urls: [Array],
+      queue: 'demo_queue',
+      noAck: false,
+      prefetchCount: 5,
+      queueOptions: [Object]
+    },
+    transportId: 5,
+    server: AmqpConnectionManager {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: 0,
+      _closed: false,
+      _disconnectSent: false,
+      _channels: [Array],
+      _currentUrl: 1,
+      connectionOptions: undefined,
+      heartbeatIntervalInSeconds: 5,
+      reconnectTimeInSeconds: 5,
+      _findServers: [Function],
+      _connectPromise: undefined,
+      _urls: [Array],
+      _currentConnection: [ChannelModel],
+      [Symbol(kCapture)]: false
+    },
+    channel: ChannelWrapper {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      _settingUp: [Promise],
+      _messages: [],
+      _unconfirmedMessages: [],
+      _consumers: [],
+      _working: false,
+      _workerNumber: 0,
+      _channelHasRoom: true,
+      _onConnect: [Function: bound _onConnect] AsyncFunction,
+      _onDisconnect: [Function: bound _onDisconnect],
+      _connectionManager: [AmqpConnectionManager],
+      name: undefined,
+      _publishTimeout: undefined,
+      _json: false,
+      _setups: [Array],
+      _irrecoverableCode: undefined,
+      _channel: [ConfirmChannel],
+      [Symbol(kCapture)]: false
+    },
+    urls: [ 'amqp://root:root@0.0.0.0:5672' ],
+    queue: 'demo_queue',
+    prefetchCount: 5,
+    isGlobalPrefetchCount: false,
+    queueOptions: { durable: true },
+    serializer: RmqRecordSerializer {},
+    deserializer: IncomingRequestDeserializer {}
+  },
+  _moduleRefsByDistance: [
+    Module {
+      _metatype: [class RbmqtModule],
+      container: [NestContainer],
+      _imports: [Set],
+      _providers: [Map],
+      _injectables: Map {},
+      _middlewares: Map {},
+      _controllers: [Map],
+      _exports: Set {},
+      _distance: 1,
+      _id: '209cabbc-24e9-46ab-b486-72cb2aefac58',
+      _token: '10245eb0ef08d81ca7d8015c162b9771eb303a0f'
+    },
+    Module {
+      _metatype: [class InternalCoreModule],
+      container: [NestContainer],
+      _imports: Set {},
+      _providers: [Map],
+      _injectables: Map {},
+      _middlewares: Map {},
+      _controllers: Map {},
+      _exports: [Set],
+      _distance: 0,
+      _id: '725fa076-11de-4172-bedd-f34b20a99635',
+      _token: 'f2fe1d3f0f2ec24a272a3e485d3847176e3188e0'
+    },
+    Module {
+      _metatype: [class AppModule],
+      container: [NestContainer],
+      _imports: [Set],
+      _providers: [Map],
+      _injectables: Map {},
+      _middlewares: Map {},
+      _controllers: [Map],
+      _exports: Set {},
+      _distance: 0,
+      _id: 'a5f40f16-3215-4c66-8f4e-0a4032ad46e6',
+      _token: '4ce59bdc14e4b865398ebd19c1497d5c2fd76072'
+    }
+  ]
+}
