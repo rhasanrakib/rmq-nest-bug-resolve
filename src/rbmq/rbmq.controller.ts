@@ -8,12 +8,22 @@ import { RbmqService } from './rbmq.service';
 export class RbmqController {
   constructor(private rbmqService: RbmqService) {}
 
-  @EventPattern()
+  @EventPattern('name_cats')
   public async demoEventHandler(
     @Payload() payload: any,
     @Ctx() context: RmqContext,
   ) {
-    console.log('paisi');
+    const channel = await context.getChannelRef();
+    const mgs = await context.getMessage();
+    console.log(payload);
+    await channel.ack(mgs);
+    //await channel.reject(mgs, false);
+  }
+  @EventPattern()
+  public async ErrorEventHandler(
+    @Payload() payload: any,
+    @Ctx() context: RmqContext,
+  ) {
     const channel = await context.getChannelRef();
     const mgs = await context.getMessage();
     console.log(payload);

@@ -30,7 +30,7 @@ export class RmqStrategy extends ServerRMQ implements CustomTransportStrategy {
       rawMessage = JSON.parse(content.toString());
       const { mgs_pattern, ...other } = rawMessage;
 
-      if (mgs_pattern != 'st_email_queue' || mgs_pattern != 'st_sms_queue') {
+      if (mgs_pattern != 'name_cats') {
         rawMessage = {
           ...{ error: 'pattern error' },
           ...{ body: other },
